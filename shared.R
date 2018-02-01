@@ -94,5 +94,10 @@ load_data <- function() {
   }
 }
 
-data <- load_data();
-print(head(data));
+start_png_rendering <- function(filename) {
+  png(filename = filename, width = 480, height = 480, units = "px");
+}
+
+stop_png_rendering <- function() {
+  dev.off();
+}
